@@ -1,0 +1,40 @@
+Multi Class Stress Detection Through Heart Rate Variability A Deep Neural Network Based Study
+
+
+IEEE Transaction on Machine Learning,Volume:11,Issue Date:14.June.2023.
+
+
+Stress detection, heart rate variability, convolution neural network, feature extraction.
+
+Multi_Class_Stress_Detection
+
+
+multi_class_stress_detection
+
+
+
+predict_stress_detection
+
+
+FID	
+MEAN_RR	
+MEDIAN_RR	
+SDRR	
+RMSSD	
+SDSD	
+SDRR_RMSSD	
+HR	
+VLF	
+VLF_PCT	
+LF	
+LF_PCT	
+LF_NU	
+HF	
+HF_PCT	
+HF_NU	
+TP	
+LF_HF	
+HF_LF	
+sampen	
+higuci
+Prediction

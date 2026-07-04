@@ -1,0 +1,123 @@
+{% extends 'SProvider/Header.html' %}
+{% block researchblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 1104px;
+    height: 442px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style12 {color: #FFFF00; font-weight: bold; }
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p align="center" class="text-uppercase pull-center style1">View Stress Prediction Type Details  !!! </p>
+                            <hr>
+                            <div class="tweettext">
+                               <table width="739" border="5" align="center" bordercolor="#FF00FF">
+
+                                   <td width="366" bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">FID</span></div></td>
+<td width="366" bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">MEAN_RR</span></div></td>
+	<td width="366" bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">MEDIAN_RR</span></div></td>
+<td width="366" bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">SDRR</span></div></td>
+<td width="366" bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">RMSSD	</span></div></td>
+<td width="366" bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">SDSD	</span></div></td>
+<td width="366" bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">SDRR_RMSSD	</span></div></td>
+<td width="366" bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">HR	</span></div></td>
+<td width="366" bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">VLF	</span></div></td>
+<td width="366" bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">VLF_PCT	</span></div></td>
+<td width="366" bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">LF	</span></div></td>
+<td width="366" bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">LF_PCT	</span></div></td>
+<td width="366" bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">LF_NU	</span></div></td>
+<td width="366" bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">HF	</span></div></td>
+<td width="366" bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">HF_PCT	</span></div></td>
+<td width="366" bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">HF_NU	</span></div></td>
+<td width="366" bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">TP	</span></div></td>
+<td width="366" bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">LF_HF	</span></div></td>
+<td width="366" bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">HF_LF	</span></div></td>
+<td width="366" bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">sampen	</span></div></td>
+<td width="366" bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">higuci</span></div></td>
+<td width="366" bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">Prediction</span></div></td>
+
+                      </tr>
+                            {% for object in list_objects %}
+                      <tr>
+
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.FID}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.MEAN_RR}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.MEDIAN_RR}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.SDRR}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.RMSSD}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.SDSD}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.SDRR_RMSSD}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.HR}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.VLF}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.VLF_PCT}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.LF}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.LF_PCT}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.LF_NU}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.HF}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.HF_PCT}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.HF_NU}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.TP}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.LF_HF}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.HF_LF}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.sampen}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.higuci}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.Prediction}}</div></td>
+
+                        </tr>
+
+                                        {% endfor %}
+                      </table>
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>
